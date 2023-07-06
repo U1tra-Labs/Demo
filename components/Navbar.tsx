@@ -35,15 +35,14 @@ const Navbar = () => {
       </div>
 
       <div className="flex items-center space-x-4">
-        <span className="text-[15px] font-normal">Rune Protocol</span>
         <button className="button">
           <span className="bg-gradient-to-r from-[#9945ff] to-[#14f915] bg-clip-text text-transparent text-[15px] font-medium">
-            Solana
+            Digital Assets
           </span>
         </button>
         <WalletMultiButton className="bg-gradient-to-r from-[#9945ff] to-[#14f915] !rounded-full">
           <span className="text-sm font-semibold ">
-            {connected ? truncatedPublicKey : "Launch"}
+            {connected ? truncatedPublicKey : "Connect Wallet"}
           </span>
         </WalletMultiButton>
       </div>

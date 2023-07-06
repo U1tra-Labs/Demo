@@ -25,7 +25,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const endpoint = useMemo(() => "https://api.devnet.solana.com", []);
+  const endpoint = useMemo(() => "https://rpc-devnet.helius.xyz/?api-key=0f8a8423-3f18-414e-b81e-c6cfe5405be0", []);
 
   const wallets = useMemo(() => [new PhantomWalletAdapter()], []);
   return (

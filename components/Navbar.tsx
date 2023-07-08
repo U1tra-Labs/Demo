@@ -18,7 +18,6 @@ const Navbar = () => {
   const network = WalletAdapterNetwork.Devnet;
 
   const { connected, publicKey } = useWallet();
-  console.log(publicKey);
   const truncatedPublicKey = publicKey ? truncate(publicKey.toString()) : "";
 
   return (
@@ -35,11 +34,44 @@ const Navbar = () => {
       </div>
 
       <div className="flex items-center space-x-4">
-        <button className="button">
-          <span className="bg-gradient-to-r from-[#9945ff] to-[#14f915] bg-clip-text text-transparent text-[15px] font-medium">
-            Digital Assets
-          </span>
-        </button>
+        <select
+          className="button bg-black appearance-none"
+          name="Asset"
+          title="Asset"
+          id=""
+        >
+          <option
+            className="bg-gradient-to-r from-[#9945ff] to-[#14f915] bg-clip-text text-transparent text-[15px] font-medium"
+            value="Solana"
+          >
+            Solana
+          </option>
+          <option
+            className="bg-gradient-to-r from-[#9945ff] to-[#14f915] bg-clip-text text-transparent text-[15px] font-medium"
+            value="Ethereum"
+          >
+            Ethereum
+          </option>
+          <option
+            className="bg-gradient-to-r from-[#9945ff] to-[#14f915] bg-clip-text text-transparent text-[15px] font-medium"
+            value="Binance"
+          >
+            Binance
+          </option>
+          <option
+            className="bg-gradient-to-r from-[#9945ff] to-[#14f915] bg-clip-text text-transparent text-[15px] font-medium"
+            value="Optimism"
+          >
+            Optimism
+          </option>
+          <option
+            className="bg-gradient-to-r from-[#9945ff] to-[#14f915] bg-clip-text text-transparent text-[15px] font-medium"
+            value="Polygon"
+          >
+            Polygon
+          </option>
+        </select>
+
         <WalletMultiButton className="bg-gradient-to-r from-[#9945ff] to-[#14f915] !rounded-full">
           <span className="text-sm font-semibold ">
             {connected ? truncatedPublicKey : "Connect Wallet"}

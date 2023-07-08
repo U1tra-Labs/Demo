@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <section className="min-h-[90%] flex flex-col mt-[15%] items-center justify-center space-y-9">
       <h1 className="text-[4rem] text-center flex flex-wrap font-bold">
-        Unleashing Solana's Potential: <br /> Powering Blockchain Performance
+        Unleashing Digital Assets: <br /> Powering Blockchain Performance
       </h1>
       <p className="text-xl text-center w-[50%] font-normal text-gray-500">
         A multi-chain lending protocol built on Solana. We bring forward

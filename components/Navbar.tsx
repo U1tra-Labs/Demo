@@ -35,7 +35,7 @@ const Navbar = () => {
 
       <div className="flex items-center space-x-4">
         <select
-          className="button bg-black appearance-none"
+          className="button bg-black text-white appearance-none"
           name="Asset"
           title="Asset"
           id=""

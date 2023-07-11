@@ -19,7 +19,6 @@ const Navbar = () => {
 
   const { connected, publicKey } = useWallet();
   const truncatedPublicKey = publicKey ? truncate(publicKey.toString()) : "";
-
   return (
     <header className={styles.wrapper}>
       <div className="flex items-center space-x-2">
@@ -34,47 +33,14 @@ const Navbar = () => {
       </div>
 
       <div className="flex items-center space-x-4">
-        <select
-          className="button bg-black text-white appearance-none"
-          name="Asset"
-          title="Asset"
-          id=""
-        >
-          <option
-            className="bg-gradient-to-r from-[#9945ff] to-[#14f915] bg-clip-text text-transparent text-[15px] font-medium"
-            value="Solana"
-          >
+        <button className="button">
+          <span className="bg-gradient-to-r from-[#9945ff] to-[#14f915] bg-clip-text text-transparent text-[15px] font-medium">
             Solana
-          </option>
-          <option
-            className="bg-gradient-to-r from-[#9945ff] to-[#14f915] bg-clip-text text-transparent text-[15px] font-medium"
-            value="Ethereum"
-          >
-            Ethereum
-          </option>
-          <option
-            className="bg-gradient-to-r from-[#9945ff] to-[#14f915] bg-clip-text text-transparent text-[15px] font-medium"
-            value="Binance"
-          >
-            Binance
-          </option>
-          <option
-            className="bg-gradient-to-r from-[#9945ff] to-[#14f915] bg-clip-text text-transparent text-[15px] font-medium"
-            value="Optimism"
-          >
-            Optimism
-          </option>
-          <option
-            className="bg-gradient-to-r from-[#9945ff] to-[#14f915] bg-clip-text text-transparent text-[15px] font-medium"
-            value="Polygon"
-          >
-            Polygon
-          </option>
-        </select>
-
+          </span>
+        </button>
         <WalletMultiButton className="bg-gradient-to-r from-[#9945ff] to-[#14f915] !rounded-full">
           <span className="text-sm font-semibold ">
-            {connected ? truncatedPublicKey : "Connect Wallet"}
+            {connected ? truncatedPublicKey : "Launch App"}
           </span>
         </WalletMultiButton>
       </div>
@@ -83,3 +49,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

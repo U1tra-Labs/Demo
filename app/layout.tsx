@@ -1,6 +1,6 @@
 'use client'
 import { Navbar } from "@/components";
-import "./globals.css";
+import "app/globals.css";
 import { Inter } from "next/font/google";
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 import {

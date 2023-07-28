@@ -4,7 +4,7 @@
 
 
 body {
-  @apply bg-[#1C2442] text-white bg-hero-pattern bg-cover bg-no-repeat;
+  @apply bg-[#1C2442] text-white bg-hero-pattern bg-cover bg-no-repeat overflow-x-hidden;
 }
 
 .button {
@@ -18,7 +18,7 @@ body {
   box-shadow: 2px 1000px 1px #151726 inset;
 }
 
-.border{
+.border {
   box-shadow: 0px 4px 15px 0px rgba(43, 43, 43, 0.25);
   border: solid 3px transparent;
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #9945FF, #14F195);

@@ -1,13 +1,19 @@
-import React from "react";
+'use client'
 
-const Dashboard = () => {
+import { Header } from "@/components";
+import { useWallet, WalletProvider } from "@solana/wallet-adapter-react";
+
+export default function Home() {
+  const { connected } = useWallet();
   return (
-    <div className=" mt-[10%] flex flex-col items-center">
-      <div className="w-[1106px] flex items-center border min-h-[231px] p-[24px] bg-[#1C2442]">
-        <div className="bg-gradient-to-r from-[#9945FF] to-[#14F195] w-[1059px] h-[235px]"></div>
-      </div>
-    </div>
+    <main className="">
+      {connected ? (
+        <div className="min-h-screen flex flex-col items-center justify-center">
+          Dashboard
+        </div>
+      ) : (
+        <Header />
+      )}
+    </main>
   );
-};
-
-export default Dashboard;
+}

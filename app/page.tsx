@@ -9,7 +9,7 @@ export default function Home() {
     <main className="">
       {connected ? (
         <div className="min-h-screen flex flex-col items-center justify-center">
-          Dashboard
+          Dashboard: Coming Soon
         </div>
       ) : (
         <Header />
